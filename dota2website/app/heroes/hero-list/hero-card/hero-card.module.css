@@ -1,0 +1,49 @@
+.hero_card {
+    width: 225px;
+    height: 127px;
+    background-color: gray;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px black;
+}
+
+.hero_card:hover {
+    transform: scale(1.3);
+    z-index: 9999;
+}
+
+.hero_name {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: -30px;
+    left: 25px;
+    z-index: 99;
+    opacity: 0;
+    transition-property: opacity, bottom;
+    transition: 0.2s;
+}
+
+.hero_card:hover .hero_name {
+    opacity: 1;
+    bottom: 10px;
+}
+
+.card_mask {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    opacity: 0;
+    transition-property: opacity;
+    transition: 0.2s;
+    background-image: linear-gradient(rgba(255,0,0,0) 55%, rgba(0,0,0,1));
+}
+
+.hero_card:hover .card_mask {
+    opacity: 1;
+}

@@ -2,9 +2,11 @@ import { getHeroes, Hero } from "@/services/HeroService";
 import HeroCard from "./hero-card/hero-card";
 import heroListStyle from "./hero-list.module.css"
 
-type Props = {}
+type Props = {
+  className: string;
+}
 
-export default async function HeroList({}: Props) {
+export default async function HeroList({ className }: Props) {
   const heroes = await getHeroes();
 
   const heroComponents = heroes.map((hero) => (
@@ -12,7 +14,7 @@ export default async function HeroList({}: Props) {
   ));
 
   return (
-    <div className={`${heroListStyle.hero_list}`}>
+    <div className={`${className} ${heroListStyle.hero_list}`}>
       { heroComponents }
     </div>
   )
