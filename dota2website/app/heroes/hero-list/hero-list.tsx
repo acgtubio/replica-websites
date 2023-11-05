@@ -9,7 +9,7 @@ type Props = {
 export default async function HeroList({ className }: Props) {
   const heroes = await getHeroes();
 
-  const heroComponents = heroes.map((hero) => (
+  const heroComponents = heroes.sort((hero1, hero2) => hero1.name_english_loc?.localeCompare(hero2.name_english_loc)).map((hero) => (
     <HeroCard key={hero.id} heroData={hero}/>
   ));
 
