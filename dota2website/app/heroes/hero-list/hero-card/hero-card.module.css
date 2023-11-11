@@ -2,6 +2,7 @@
     width: 225px;
     height: 127px;
     background-color: gray;
+    color: white;
     margin: 10px;
     cursor: pointer;
     transition: 0.3s;

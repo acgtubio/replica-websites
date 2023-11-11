@@ -1007,3 +1007,9 @@ const dummyHeroes: Hero[]  = [
 export const getHeroes = async () => {
     return dummyHeroes;
 };
+
+export const findHeroIdByName = async ( heroName: string ) : Promise<number> => {
+    const filteredHeroes = dummyHeroes.filter( hero => heroName === hero['name_english_loc'].toLowerCase().split(" ").join("") );
+
+    return filteredHeroes[0]?.id;
+}
