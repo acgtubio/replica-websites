@@ -1,4 +1,5 @@
 import { findHeroIdByName } from '@/services/HeroService';
+import HeroDetails from './hero-details';
 import React from 'react'
 
 type Props = {
@@ -11,6 +12,6 @@ export default async function Hero({ params }: Props) {
   const heroId = await findHeroIdByName(params.hero);
 
   return (
-    <div>{params.hero}</div>
+    <HeroDetails />
   )
 }
