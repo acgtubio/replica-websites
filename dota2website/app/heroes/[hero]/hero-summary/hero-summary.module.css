@@ -1,0 +1,12 @@
+.hero_summary {
+    padding-top: 50px;
+}
+
+.hero_name {
+    font-size: 80px;
+    display: flex;
+}
+
+.hero_description {
+    font-size: 1.3rem;
+}

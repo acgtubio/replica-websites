@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.subheader{
+    max-width: 1000px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.subheader_responsive {
+    width: 70%;
+    font-size: 26px;
+}
+
+.hero_list_container {
+    width: 70%;
+}
+
+@media screen and (max-width: 1300px) {
+    .subheader_responsive {
+        width: 90%;
+        font-size: max(16px, 2vw);
+    }
+    .hero_list {
+        width: 90%;
+    }
+}
+
